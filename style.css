@@ -1,0 +1,140 @@
+body {
+    background-color: hsl(210, 46%, 95%);
+    padding: 1rem;
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 350px 200px;
+    justify-content: center;
+    gap: 30px;
+    
+    
+}
+
+section:nth-child(1) {
+    display: grid;  
+    grid-template-columns: 60% 40%;
+    gap: 20px;
+    padding: 1.5rem;
+}
+section:nth-child(2){
+    display: grid;  
+    grid-template-columns: 40% 60%;
+    gap: 20px;
+    padding: 1.5rem;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+/* common css for different section*/
+.header {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+}
+.header .name{
+    font-weight: 500;
+}
+.header .subtitle{
+    opacity: 50%;
+}
+ h3{
+    font-size: large;
+    font-weight: 600;
+}
+ p{
+    opacity: 70%;
+}
+img {
+    grid-row: span 2;
+    border-radius: 30px;
+}
+
+.sectionOneLeft{
+    background-color: hsl(263, 55%, 52%);
+    background-image: url('images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    color: white;
+    border-radius: 10px;
+    padding: 2rem;
+}
+.sectionOneRight{
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 2rem;
+    padding-left: 4rem;
+    padding-right: 6rem;
+}
+
+.sectionTwoLeft{
+    background-color: hsl(0, 0%, 100%);
+    color: black;
+    border-radius: 10px;
+    padding: 2rem;
+    padding-left: 4rem;
+    padding-right: 6rem;
+}
+.sectionTwoRight{
+    background-color: hsl(219, 29%, 14%);
+    color: white;
+    border-radius: 10px;
+    padding: 2rem;
+}
+aside{
+    background-color: hsl(0, 0%, 100%);
+    color: black;
+    border-radius: 10px;
+    float: left !important; 
+    margin: 20px;
+    padding: 1rem;
+    width: 300px;
+    height: 700px;
+}
+.sectionAside{
+    padding: 1rem;
+    font-size: 14.5px;
+    padding-left: 1rem;
+    padding-right: 5rem;
+    line-height: 1.4rem;
+}
+@media only screen and (max-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    section{
+        display: grid;
+    }
+    section:nth-child(1) {
+        grid-template-columns: 100%;
+        gap: 0px;
+    }
+    .sectionOneLeft{
+        margin-bottom: 8vh;
+    }
+    .sectionOneRight{
+        margin-bottom: 8vh; 
+    }
+    section:nth-child(2) {
+        grid-template-columns:1fr;
+        gap: 0px;
+    }
+    .sectionTwoLeft{
+        margin-top: 60vh ;
+        margin-bottom: 10vh;
+    }
+    .sectionTwoRight{
+        margin-bottom: 120vh;
+    }
+    aside{
+        float: none;
+        margin-top: 140vh;
+    }
+}
